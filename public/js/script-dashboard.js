@@ -133,6 +133,15 @@ function statusParser(update) {
 
 function temperatureEvent(info) {
 
+    difference = info.currentSetpoint - info.currentDisplayTemp;
+    console.log(difference);
+
+    if (difference >= 0) {
+        aircoChange('on');
+    } else {
+        aircoChange('off');
+    }
+
     //Update the global variable, so we can use that when changing the temperature
     temperatureInfo = info;
 
@@ -168,5 +177,18 @@ function programEvent(states) {
         var tempString = formatTemperature(parseFloat(states[i].tempValue));
 
         $(programButtons[i]).find('.temp').html(tempString);
+    }
+}
+
+//Met dank aan Tristan
+function aircoChange(switcheroo) {
+
+    if (switcheroo == "on") {
+        //Zet de airco uit
+        api.setAirco(0, wallPlugUUID);
+    }
+    if (switcheroo == "off") {
+        //Zet de airco aan
+        api.setAirco(1, wallPlugUUID);
     }
 }

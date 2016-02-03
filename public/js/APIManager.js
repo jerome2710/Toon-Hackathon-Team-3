@@ -188,4 +188,38 @@ var APIManager = function () {
             }
         });
     };
+
+    self.setAirco = function (state, wallPlugUUID) {
+        $.ajax({
+            url: apiUrl + '/devices/' + wallPlugUUID,
+            type: 'PUT',
+            dataType: 'json',
+            contentType: 'application/json',
+            data: JSON.stringify({
+                currentState: state
+            }),
+            success: function() {
+                console.log("Aircostatus is nu: " + state);
+            },
+            error: function(e) {
+                console.log("Kon aircostatus niet aanpassen, omdat: " + JSON.stringify(e, null, 4));
+            }
+
+        })
+    }
+
+    self.getAirco = function(wallPlugUUID){
+        $.ajax({
+            url: apiUrl + '/devices/' + wallPlugUUID,
+            type: 'GET',
+            dataType: 'json',
+            success: function(data) {
+                console.log(data.currentState);
+            },
+            error: function(e) {
+                return "Je airco is stuk, omdat: " + JSON.stringify(e, null, 4);
+            }
+
+        })
+    }
 };
