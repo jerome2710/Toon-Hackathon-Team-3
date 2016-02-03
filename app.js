@@ -6,18 +6,22 @@ var express = require('express'),
     app = express(),
     api = express(),
     http = require('http'),
-    https = require('https');
-
+    https = require('https'),
+	credentials = require('./credentials');
 
 /**
- * You have received a username and password with your key and secret, these are credentials for a Toon Account.
- * These credentials you have to ask the customer in the future with a OAUTH-request.
+ * Check if credentials are present
  */
 
-const APIKEY = ""; //Fill in supplied Key
-const APISECRET = ""; //Fill in supplied Secret
-var username = "";
-var password = "";
+if (!credentials.apikey || !credentials.apisecret) {
+    console.error('You haven\'t created the credentials.js');
+    process.exit(1);
+}
+
+const APIKEY = credentials.apikey;
+const APISECRET = credentials.apisecret;
+var username = credentials.username;
+var password = credentials.password;
 
 const SERVERPORT = 3001;
 const WEBPORT = 8080;
