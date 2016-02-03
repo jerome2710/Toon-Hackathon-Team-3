@@ -1,65 +1,65 @@
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Thermostat API Demo</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<header class="page-header">
-    <span>Thermostat API Demo</span>
-    <div class="left logo">Quby</div>
-    <nav class="right menu">
-        <a class="menu-item" data-action="login" href="#login">Login</a>
-    </nav>
-</header>
-<aside class="actions">
-    <button class="login" data-action="login">Login</button>
-</aside>
-<main class="content">
-    <div class="thermostat-state">
-        <div class="heating-icon"></div>
-        <div class="temperature">--</div>
-        <div class="set-temperature"></div>
-    </div>
-    <button class="thermostat-plus button" data-action="temperature" data-type="up" id="thermPlus">+</button>
-    <button class="thermostat-min button" data-action="temperature" data-type="down" id="thermMinus">-</button>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Thermostat API Demo</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<header class="page-header">
+			<span>Thermostat API Demo</span>
+			<div class="left logo">Quby</div>
+			<nav class="right menu">
+				<a class="menu-item" data-action="login" href="#login">Login</a>
+			</nav>
+		</header>
+		<aside class="actions">
+			<button class="login" data-action="login">Login</button>
+		</aside>
+		<main class="content">
+			<div class="thermostat-state">
+				<div class="heating-icon"></div>
+				<div class="temperature">--</div>
+				<div class="set-temperature"></div>
+			</div>
+			<button class="thermostat-plus button" data-action="temperature" data-type="up" id="thermPlus">+</button>
+			<button class="thermostat-min button" data-action="temperature" data-type="down" id="thermMinus">-</button>
 
-    <div class="thermostat-program">
-        <div class="row">
-            <div class="row-item name">Program</div>
-            <div class="row-item value">
-                <button data-action="toggleProgram" class="row-item switch"></button>
-            </div>
-        </div>
-        <div class="state-buttons" data-action="state">
-            <button class="state-button">
-                <span class="temp"></span>
-                <span class="scenario">Comfort</span>
-            </button>
-            <button class="state-button">
-                <span class="temp"></span>
-                <span class="scenario">Home</span>
-            </button>
-            <button class="state-button">
-                <span class="temp"></span>
-                <span class="scenario">Sleep</span>
-            </button>
-            <button class="state-button">
-                <span class="temp"></span>
-                <span class="scenario">Away</span>
-            </button>
-        </div>
-    </div>
+			<div class="thermostat-program">
+				<div class="row">
+					<div class="row-item name">Program</div>
+					<div class="row-item value">
+						<button data-action="toggleProgram" class="row-item switch"></button>
+					</div>
+				</div>
+				<div class="state-buttons" data-action="state">
+					<button class="state-button">
+						<span class="temp"></span>
+						<span class="scenario">Comfort</span>
+					</button>
+					<button class="state-button">
+						<span class="temp"></span>
+						<span class="scenario">Home</span>
+					</button>
+					<button class="state-button">
+						<span class="temp"></span>
+						<span class="scenario">Sleep</span>
+					</button>
+					<button class="state-button">
+						<span class="temp"></span>
+						<span class="scenario">Away</span>
+					</button>
+				</div>
+			</div>
 
-</main>
-<footer class="page-footer">
+		</main>
+		<footer class="page-footer">
 
-</footer>
+		</footer>
 
-<script src="js/jquery.js"></script>
-<script src="js/APIManager.js"></script>
-<script src="js/utils.js"></script>
-<script src="js/script.js"></script>
-</body>
+		<script src="js/jquery.js"></script>
+		<script src="js/APIManager.js"></script>
+		<script src="js/utils.js"></script>
+		<script src="js/script.js"></script>
+	</body>
 </html>

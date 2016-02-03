@@ -1,0 +1,59 @@
+html {
+    height: 100%;
+	width: 100%;
+    margin: 0;
+}
+
+body {
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1em;
+    font-weight: 200;
+    height: 100%;
+    margin: 0;
+    overflow:hidden;
+    white-space: nowrap;
+    width: 100%;
+	background-image: url(../images/bg.jpg);
+	background-position: 50% 50%;
+}
+
+.container {
+	margin-top: 10%;
+}
+
+.status {
+	text-align: center;
+	font-size: 4em;
+	font-weight: 200;
+	display: block;
+}
+
+.taircoon-connect, .taircoon-blocks {
+	margin-top: 50px;
+}
+
+.taircoon-connect .block {
+	background: rgba(255, 255, 255, 0.4);
+	font-size: 8em;
+	text-align: center;
+	padding: 50px;
+}
+
+.taircoon-connect .block:hover {
+	cursor: pointer;
+}
+
+.taircoon-blocks .block .inner-content {
+	background: rgba(255, 255, 255, 0.4);
+	height: 300px;
+	text-align: center;
+}
+
+.taircoon-blocks .block {
+	padding: 0 20px;
+}
+
+.taircoon-blocks .block .temperature {
+	font-size: 8em;
+}

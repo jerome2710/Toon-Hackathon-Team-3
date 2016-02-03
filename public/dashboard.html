@@ -1,0 +1,63 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Toon Hackathon Team 3 - Taircoo</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,700,900,200" rel="stylesheet" type="text/css">
+		<link href="css/dashboard.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+
+		<div id="foo" style="position:absolute;top:0;left:0;"></div>
+
+		<div class="container">
+			<div class="row status">
+				<span>Currently:</span><br>
+				<span class="current-status">Monitoring climate</span>
+			</div>
+
+			<div class="row taircoon-connect">
+				<div class="col-sm-4">&nbsp;</div>
+				<div class="col-sm-4 block">
+					<span class="connect" id="connect" data-action="login"><i class="fa fa-sign-in"></i></span>
+				</div>
+				<div class="col-sm-4">&nbsp;</div>
+			</div>
+
+
+
+			<div class="row taircoon-blocks">
+				<div class="col-sm-3 block">
+					<div class="inner-content" id="tempSpinner"></div>
+					<div class="inner-content" id="temperature" style="display:none;">
+						<span class="temperature"></span><br>
+						target: <span class="set-temperature"></span>
+					</div>
+				</div>
+				<div class="col-sm-3 block">
+					<div class="inner-content">
+						<i class="fa fa-cloud"></i>
+					</div>
+				</div>
+				<div class="col-sm-3 block">
+					<div class="inner-content">
+
+					</div>
+				</div>
+				<div class="col-sm-3 block">
+					<div class="inner-content">
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/jquery.js"></script>
+		<script src="js/spin.min.js"></script>
+		<script src="js/APIManager.js"></script>
+		<script src="js/utils.js"></script>
+		<script src="js/script-dashboard.js"></script>
+	</body>
+</html>
